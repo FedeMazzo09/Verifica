@@ -1,0 +1,21 @@
+public class Attico extends Abitazione{
+    private int superficieTerrazzo;
+    private float calcolo;
+    private float percentuale;
+
+    public Attico(int superficie, int categoria, int vani, int superficieTerrazzo) {
+        super(superficie, categoria, vani);
+        this.superficieTerrazzo=superficieTerrazzo;
+    }
+
+    public float calcolaRenditaBase() {
+        calcolo= super.calcolaRenditaBase();
+        percentuale= (float) (superficieTerrazzo * 2) /100;
+        calcolo= calcolo+(calcolo*percentuale);
+        return calcolo;
+    }
+
+    public String toString() {
+        return super.toString() + " e la superficie del terrazzo è: " + superficieTerrazzo;
+    }
+}
