@@ -1,4 +1,4 @@
-public class Immobile {
+public abstract class Immobile {
     private int superficie;
     private int particella;
     private int categoria;
@@ -15,6 +15,6 @@ public class Immobile {
     }
 
     public String toString() {
-        return "L'immobile ha la superficie di: " + superficie + " la sua particella è: " + particella + " e appartiene alla categoria " + " e la rendita è: " + calcolaRenditaBase();
+        return "L'immobile ha la superficie di: " + superficie + " la sua particella è: " + particella + " e appartiene alla categoria " + categoria + " e la rendita è: " + calcolaRenditaBase();
     }
 }

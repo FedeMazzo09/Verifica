@@ -23,6 +23,26 @@ public class RegistroImmobili {
         return somma;
     }
 
+    public float renditaMassima(){
+        float max=0;
+        for (int i=0;i< counter;i++){
+            if (registro[i].calcolaRenditaBase()>max){
+                max= registro[i].calcolaRenditaBase();
+            }
+        }
+        return max;
+    }
+
+    public float renditaMinima(){
+        float min= registro[0].calcolaRenditaBase();
+        for (int i=0;i< counter;i++){
+            if (registro[i].calcolaRenditaBase()<min){
+                min= registro[i].calcolaRenditaBase();
+            }
+        }
+        return min;
+    }
+
     public Immobile[] stampa(){
         return java.util.Arrays.copyOf(registro, counter);
     }
