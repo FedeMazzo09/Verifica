@@ -10,11 +10,27 @@ public abstract class Immobile {
         this.categoria=categoria;
     }
 
+    public int getParticella() {
+        return particella;
+    }
+
     public float calcolaRenditaBase(){
         return superficie*categoria;
     }
 
     public String toString() {
         return "L'immobile ha la superficie di: " + superficie + " la sua particella è: " + particella + " e appartiene alla categoria " + categoria + " e la rendita è: " + calcolaRenditaBase();
+    }
+
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+
+        Immobile other = (Immobile) obj;
+        return this.particella == other.particella;
     }
 }

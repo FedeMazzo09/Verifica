@@ -21,4 +21,16 @@ public class Terreno extends Immobile{
     public String toString() {
         return super.toString() + " e la sua edificabilità è: " + isFabbricabile;
     }
+
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+
+        Terreno other = (Terreno) obj;
+        return this.getParticella() == other.getParticella();
+    }
 }

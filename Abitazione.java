@@ -16,4 +16,16 @@ public class Abitazione extends Immobile{
     public String toString() {
         return super.toString() + " e il numero dei vani è: " + vani;
     }
+
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+
+        Abitazione other = (Abitazione) obj;
+        return this.getParticella() == other.getParticella();
+    }
 }

@@ -4,7 +4,7 @@ public class Test {
     static void main() {
         Abitazione i1= new Abitazione(150, 3, 6);
         Terreno i2= new Terreno(200, 3, true);
-        Attico i3= new Attico(100, 4, 7, 30);
+        Attico i3= new Attico(100, 4, 7, 50);
 
         RegistroImmobili r1 = new RegistroImmobili(10);
 
