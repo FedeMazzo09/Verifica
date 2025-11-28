@@ -2,9 +2,9 @@ import java.util.Arrays;
 
 public class Test {
     static void main() {
-        Abitazione i1= new Abitazione(150, 3, 6);
-        Terreno i2= new Terreno(200, 3, true);
-        Attico i3= new Attico(100, 4, 7, 50);
+        Abitazione i1= new Abitazione(80, 4, 3);
+        Terreno i2= new Terreno(500, 2, true);
+        Attico i3= new Attico(120, 3, 4, 30);
 
         RegistroImmobili r1 = new RegistroImmobili(10);
 
